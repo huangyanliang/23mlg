@@ -1,0 +1,3 @@
+<?php
+//000000086400a:17:{s:7:"iswater";s:1:"0";s:7:"fontpos";s:1:"9";s:8:"waterpos";s:1:"9";s:8:"waterpic";s:0:"";s:8:"fonttext";s:7:"JXBH.CN";s:8:"fontsize";s:2:"36";s:9:"fontcolor";s:7:"#1ea5d7";s:8:"facetype";s:1:"5";s:8:"rotation";s:1:"0";s:10:"wateralpha";s:2:"25";s:9:"picsuffix";s:16:"jpg,gif,png,jpeg";s:10:"filesuffix";s:21:"doc,docx,rar,xlsx,mp4";s:7:"picsize";s:5:"10240";s:8:"filesize";s:5:"10240";s:11:"picmaxwidth";s:4:"1200";s:10:"picmaxsize";s:1:"2";s:9:"cropwidth";s:4:"1000";}
+?>
