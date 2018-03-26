@@ -4,10 +4,10 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="登录明良广CMS <?php echo C('ADMIN_VERSION');?>">
- <meta name="keywords" content="登录明良广CMS <?php echo C('ADMIN_VERSION');?>">
+ <meta name="description" content="登录澳菲环保后台管理系统 <?php echo C('ADMIN_VERSION');?>">
+ <meta name="keywords" content="登录澳菲环保后台管理系统  <?php echo C('ADMIN_VERSION');?>">
  <meta name="author" content="jxbh">
- <title>登录明良广CMS</title>
+ <title>登录澳菲环保后台管理系统 </title>
  <link rel="shortcut icon" href="/23mlg/public/Admin/images/favicon.ico" />
 <style>
 body{ font-size:12px;margin:0; padding:0;background:url(/23mlg/public/Admin/images/adminbg.jpg) repeat center center; background-attachment:fixed;font-family:"微软雅黑"; }
@@ -67,6 +67,7 @@ p.tips a{ color:#ecde2d; text-decoration:none;}
 .btn-login{ width:76px; height:40px; line-height:37px; border:solid 1px #3e4142; background:none; cursor:pointer; color:#fafafa;font-family:"微软雅黑"; position:relative; top:1px; outline:none;}
 .ui-zoom1{z-index:8;top:0px;left:0px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.2);position:absolute;opacity:0;-webkit-animation:zoom 4s .3s infinite linear; display:none;}
 .bhlist-input{ position:relative;}
+.logo{font-size:30px;color:#fff;letter-spacing: 5px;text-shadow:0px 0px 5px #000000;text-align:center;}
 </style>
 <?php if($data['adminpath'] != ''): ?><style>
   body{ font-size:12px;margin:0; padding:0;background:#2c2e2f;font-family:"微软雅黑"; }
@@ -75,14 +76,14 @@ p.tips a{ color:#ecde2d; text-decoration:none;}
 <body>
 <?php if($data['adminpath'] == ''): ?><form name="bhadmin" method="post" action="">
  <div class="i-login">
-   <div class="logo"><img src="/23mlg/public/Admin/images/logo.png"></div>
+   <div class="logo"><!--<img src="/23mlg/public/Admin/images/logo.png">-->澳菲环保后台管理系统</div>
    <div class="i-logindiv">    
      <div class="i-loginbody">
        <div class="i-user-div"><input type="text" value="" placeholder="用户名" class="i-user"></div>
        <div class="i-pass-div"><input type="password" value="" placeholder="密码" class="i-pass"></div>
        <div class="i-code-div"><input type="tel" value="" placeholder="验证码" maxlength="4" class="i-code"><div id="code-verify"></div></div>
        <div class="i-btn-div"><div class="i-login-btn">登录</div> </div>
-       <div class="i-loginfoot"> <a href="http://www.23mlg.com" target="_blank">Powered by 23mlg</a> </div>
+       <!--<div class="i-loginfoot"> <a href="http://www.23mlg.com" target="_blank">Powered by 23mlg</a> </div>-->
      </div> 
    </div>
  </div>
@@ -174,7 +175,7 @@ p.tips a{ color:#ecde2d; text-decoration:none;}
    <div class="lockscreen">
      <div class="bhface"><div class="ui-zoom1"></div></div>
      <div class="bhlist">
-       <p class="h2" style="margin-top:35px;">明良广提醒您~</p>
+       <p class="h2" style="margin-top:35px;">明奥菲环保后台管理系统 提醒您~</p>
        <p class="tips">您已经设置了后台目录保护，该登录链接已经失效。</p>
        <p class="tips">点击<a href="<?php echo U('Home/index/index');?>">链接</a>跳转到首页吧。</p>
      </div>

@@ -6,7 +6,7 @@
 </block>
 <block name="main">
 <div id="header">
- <div class="adminlogo" title="明良广后台管理"></div>
+ <div class="adminlogo" title="澳菲环保后台管理"></div>
  <div class="adminbar" data-hide="1">{:faicon('bars')}</div>
  <div class="adminmenu">
   <ul>
@@ -27,7 +27,7 @@
    <li><a data-id="0" href="{:U('index/modpass')}" target="right">{:icon('cog')}修改密码</a></li>
    <li><a data-id="0" href="{:U('index/cleancache')}" target="right">{:icon('trash')}清除缓存</a></li>
    <li><a data-id="0" href="{:U('index/main')}" target="right">{:icon('home')}系统首页</a></li>
-   <li><a data-id="0" href="http://www.23mlg.com" target="_blank">{:icon('question-sign')}关于我们</a></li>
+   <!--<li><a data-id="0" href="http://www.23mlg.com" target="_blank">{:icon('question-sign')}关于我们</a></li>-->
    <li><a data-id="0" href="{:U('index/logout')}">{:icon('share-alt')}退出系统</a></li>
   </ul>
  </div>

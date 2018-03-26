@@ -39,7 +39,7 @@ class AdminCommonController extends Controller {
 	  $this->assign('ismod',0);
 	  $this->assign('formpic',0);
 	  $this->assign('userAuth',$userAuth);
-	  $this->assign('title','明良广后台管理');
+	  //$this->assign('title','澳菲环保后台管理系统');
 	}
   }
   //权限组

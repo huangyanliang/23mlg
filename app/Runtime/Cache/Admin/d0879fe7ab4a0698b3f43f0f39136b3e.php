@@ -6,7 +6,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
  <meta name="keywords" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
- <meta name="author" content="jxbh.cn">
  <title><?php echo ($title); ?></title>
  <link href="/23mlg/public/Admin/css/bootstrap.min.css" rel="stylesheet">
  <link href="/23mlg/public/Admin/css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +30,7 @@
 <body>
 
 <div id="header">
- <div class="adminlogo" title="明良广后台管理"></div>
+ <div class="adminlogo" title="澳菲环保后台管理"></div>
  <div class="adminbar" data-hide="1"><?php echo faicon('bars');?></div>
  <div class="adminmenu">
   <ul>
@@ -48,7 +47,7 @@
    <li><a data-id="0" href="<?php echo U('index/modpass');?>" target="right"><?php echo icon('cog');?>修改密码</a></li>
    <li><a data-id="0" href="<?php echo U('index/cleancache');?>" target="right"><?php echo icon('trash');?>清除缓存</a></li>
    <li><a data-id="0" href="<?php echo U('index/main');?>" target="right"><?php echo icon('home');?>系统首页</a></li>
-   <li><a data-id="0" href="http://www.23mlg.com" target="_blank"><?php echo icon('question-sign');?>关于我们</a></li>
+   <!--<li><a data-id="0" href="http://www.23mlg.com" target="_blank"><?php echo icon('question-sign');?>关于我们</a></li>-->
    <li><a data-id="0" href="<?php echo U('index/logout');?>"><?php echo icon('share-alt');?>退出系统</a></li>
   </ul>
  </div>

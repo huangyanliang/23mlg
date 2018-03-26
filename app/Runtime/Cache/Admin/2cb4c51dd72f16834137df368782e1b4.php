@@ -6,7 +6,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
  <meta name="keywords" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
- <meta name="author" content="jxbh.cn">
  <title><?php echo ($title); ?></title>
  <link href="/23mlg/public/Admin/css/bootstrap.min.css" rel="stylesheet">
  <link href="/23mlg/public/Admin/css/font-awesome.min.css" rel="stylesheet">
@@ -38,11 +37,11 @@
      <td height="32" align="right" valign="middle">资料所属：</td>
      <td height="32" align="left"><?php echo dropdown($dshow['mdata'],$data['inftype'],$inftopic);?></td>
    </tr>
-   <tr>
+   <tr class="hide">
      <td height="32" align="right" valign="middle">跳转链接：</td>
      <td height="32" align="left"><?php echo input(array('name'=>'linkurl','place'=>'跳转链接','val'=>$data['linkurl'],'faicon'=>'link','tips'=>'注：跳转链接请提填此项，没有请勿填写。'));?></td>
    </tr>
-   <tr>
+   <tr class="hide">
      <td height="32" align="right" valign="middle">作者/来源：</td>
      <td height="32" align="left">
       <?php echo input(array('name'=>'author','place'=>'资料作者','val'=>$data['author'],'width'=>'20','icon'=>'user','tips'=>'资料作者'));?> 

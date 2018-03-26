@@ -3,7 +3,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="明良广后台管理系统 {:C('ADMIN_VERSION')}">
  <meta name="keywords" content="明良广后台管理系统 {:C('ADMIN_VERSION')}">
- <meta name="author" content="jxbh.cn">
  <title>{$title}</title>
  <link href="__css__/bootstrap.min.css" rel="stylesheet">
  <link href="__css__/font-awesome.min.css" rel="stylesheet">

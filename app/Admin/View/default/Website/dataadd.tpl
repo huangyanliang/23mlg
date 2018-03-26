@@ -12,11 +12,11 @@
      <td height="32" align="right" valign="middle">资料所属：</td>
      <td height="32" align="left">{:dropdown($dshow['mdata'])}</td>
    </tr>
-   <tr>
+   <tr class="hide">
      <td height="32" align="right" valign="middle">跳转链接：</td>
      <td height="32" align="left">{:input(array('name'=>'linkurl','place'=>'跳转链接','val'=>'','faicon'=>'link','tips'=>'注：跳转链接请提填此项，没有请勿填写。'))}</td>
    </tr>
-   <tr>
+   <tr class="hide">
      <td height="32" align="right" valign="middle">作者/来源：</td>
      <td height="32" align="left">
       {:input(array('name'=>'author','place'=>'资料作者','width'=>'19','icon'=>'user','tips'=>'资料作者'))}

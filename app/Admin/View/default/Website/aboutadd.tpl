@@ -8,7 +8,7 @@
     <td width="10%" height="32" align="right" valign="middle">资料标题：</td>
     <td height="32" align="left">{:input(array('name'=>'topic','scene'=>'topic','tips'=>'资料标题（*必填）'))}</td>
    </tr>
-   <tr class="hide">
+   <tr>
     <td width="10%" height="32" align="right" valign="middle">资料配图：</td>
     <td height="32" align="left">{:uppic(array('tips'=>'没有要求可以不用上传'))}</td>
    </tr>

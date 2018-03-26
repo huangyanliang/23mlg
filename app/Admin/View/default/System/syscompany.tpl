@@ -32,7 +32,7 @@
       </tr>
       <tr>
         <td width="132" height="32" align="right" valign="middle">　手机：</td>
-        <td height="32">{:input(array('name'=>'mobile','place'=>'手机','val'=>$data['mobile'],'icon'=>'phone','width'=>'20'))}</td>
+        <td height="32">{:input(array('name'=>'mobile','place'=>'手机','val'=>$data['mobile'],'icon'=>'phone','width'=>'40'))}</td>
       </tr>
       <tr class="hide">
         <td width="132" height="32" align="right" valign="middle">　联系人：</td>

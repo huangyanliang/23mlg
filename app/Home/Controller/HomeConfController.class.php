@@ -23,6 +23,15 @@
 	}else{
 	   exit('<h1 style="text-align:center;line-height:250px;color:#666;">NO SYSTEM DATA</h1>');
 	}
+	
+	$aboutMenu  = M('aboutus')->field('Id,topic')->where('enabled=1 and sty=1')->order('ord asc,date desc')->select();
+	$this->assign('aboutMenu',$aboutMenu);
+	$newMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=1')->order('ord asc,date desc')->select();
+	$this->assign('newMenu',$newMenu);
+	$caseMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=2')->order('ord asc,date desc')->select();
+	$this->assign('caseMenu',$caseMenu);
+	$honorMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=3')->order('ord asc,date desc')->select();
+	$this->assign('honorMenu',$honorMenu);
   }
   
   protected function insidepic($ctag=0) {
@@ -31,7 +40,7 @@
 	  $articleadv   = M('advdata')->field('pic,topic,linkurl')->where(array('ctag'=>$ctag))->find();
 	  ($articleadv) ? S('articleadv'.$ctag,$articleadv,3600) : '';
     }
-    return $articleadv;
+    return $articleadv; 
   }
-  
+   
  } 

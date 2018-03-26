@@ -24,7 +24,7 @@ class IndexController extends Controller {
 		 $this->assign('mmenu',$mmenu);
 		 $this->assign('tabid',$tabid);
 		 $this->assign('refer',U('index/main'));
-		 $this->assign('title','明良广后台管理');
+		 $this->assign('title','澳菲环保后台管理系统');
 		 $this->assign('adminauth',session('adminauth'));
 		 $this->display();
 	   }else{

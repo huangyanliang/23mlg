@@ -6,7 +6,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
  <meta name="keywords" content="明良广后台管理系统 <?php echo C('ADMIN_VERSION');?>">
- <meta name="author" content="jxbh.cn">
  <title><?php echo ($title); ?></title>
  <link href="/23mlg/public/Admin/css/bootstrap.min.css" rel="stylesheet">
  <link href="/23mlg/public/Admin/css/font-awesome.min.css" rel="stylesheet">
@@ -120,29 +119,7 @@
             </ul>
           </blockquote>
         </div>
-        <div role="tabpanel" class="tab-pane" id="contact">
-         <blockquote class="contact-jxbh">
-          <p style=" color:#129fe7; font-size:15px;">联系我们（明良广）</p>
-          <ul>
-           <li>名称：深圳市明良广电子商务有限公司</li>
-           <li>LOGO：<img src="/23mlg/public/Admin/images/logo/bhlogo.png" height="20" alt="深圳市明良广电子商务有限公司"></li>
-           <li>邮编：330006</li>
-           <li>电话：0791-88117053</li>
-           <li>邮箱：<img src="/23mlg/public/Admin/images/bh@bxbht.png" alt="bh@bxbht.com" height="16"> </li>
-           <li>作者：明良广</li>
-           <li>官网：<a href="http://www.jxbh.cn" target="_blank"><?php echo icon('link');?> http://www.jxbh.cn</a></li>
-          </ul>
-         </blockquote>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="bug">
-         <blockquote class="updata-log">
-          <p style=" color:#63f; font-size:15px;">BUG反馈</p>
-          <ul>
-           <li>反馈地址：<a href="http://www.jxbht.com/article/35.html" target="_blank"><?php echo icon('link');?> http://www.jxbht.com/article/35.html </a></li>
-           <li>或者发送问题至 88246706@qq.com 反馈</li>
-          </ul>
-         </blockquote>
-        </div>
+        
        </div>
       </div>
       <!----> 
