@@ -19,7 +19,7 @@
 				<div class="productList"><a href="">
 					<dl>
 						<dt><img src="__img__/pro1.png"/></dt>
-						<dd>雨水回用</dd>
+						<dd>污水处理</dd>
 						<div class="pro_pic">
 							<img src="__img__/pro1.jpg" />
 						</div>
@@ -95,8 +95,12 @@
 				<div class="swiper-wrapper">
 					<volist name="case" id="caseobj">
 					<div class="swiper-slide">
-						<a href=""><dl><dt class="ell">{$caseobj['topic']}</dt>
+						<a href=""><dl>
 							<dd><img src="__pic__/{$caseobj['pic']}" title="{$caseobj['topic']}" alt="{$caseobj['topic']}" width="100%" /></dd>
+							<dt>
+								<h3 class="ell">{$caseobj['topic']}</h3>
+								<p>澳菲专注于环保设备10年致力于打造行业领导品牌！</p>
+							</dt>
 						</dl></a>
 					</div>
 					</volist>

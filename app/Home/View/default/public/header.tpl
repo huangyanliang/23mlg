@@ -2,7 +2,7 @@
 			<div class="head_top">
 				<div class="main">
 					<p><img src="__img__/message_top.gif" />欢迎登录湖南环保设备知名厂商</p>
-					<ul>
+					<!--<ul>
 						<li>
 							<a href="">污水处理设备</a>
 						</li>
@@ -15,7 +15,7 @@
 						<li style="border-right:0px;">
 							<a href="">污水处理设备</a>
 						</li>
-					</ul>
+					</ul>-->
 					<dl>
 						<dt><img src="__img__/tell.png"/>服务热线：</dt>
 						<dd>{$sysconf['mobile']}</dd>
