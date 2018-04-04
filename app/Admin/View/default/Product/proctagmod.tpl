@@ -12,6 +12,10 @@
     <td width="10%" height="32" align="right" valign="middle">资料别名：</td>
     <td height="32" align="left">{:input(array('name'=>'domain','icon'=>'flag','val'=>$data['domain'],'width'=>'20','tips'=>'4~20个英文或数字的组合，可为空 ）'))}</td>
    </tr>
+      <tr>
+     <td height="32" align="right" valign="middle">上传封面图片：</td>
+     <td height="32" align="left">{:uppic(array('pic'=>$data['pic'],'tips'=>'产品封面图，300px*200px，没有要求可以不用上传！'))}</td>
+   </tr>
    <tr>
      <td height="32" align="right" valign="middle">是否启用：</td>
      <td height="32" align="left">{:checkbox($data['enabled'])} <span class="text-warning"> 注：勾选表示启用</span></td>

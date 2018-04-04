@@ -13,6 +13,10 @@
     <td height="32" align="left">{:input(array('name'=>'domain','icon'=>'flag','width'=>'20','tips'=>'4~20个英文或数字的组合，可为空 ）'))}</td>
    </tr>
    <tr>
+     <td height="32" align="right" valign="middle">上传图片：</td>
+     <td height="32" align="left">{:uppic(array('tips'=>'资料配图，前台若不显示可忽略此项！'))}</td>
+   </tr>
+   <tr>
      <td height="32" align="right" valign="middle">是否启用：</td>
      <td height="32" align="left">{:checkbox(0,1)} <span class="text-warning"> 注：勾选表示启用</span></td>
    </tr>

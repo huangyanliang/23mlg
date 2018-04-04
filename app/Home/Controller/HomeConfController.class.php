@@ -28,10 +28,12 @@
 	$this->assign('aboutMenu',$aboutMenu);
 	$newMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=1')->order('ord asc,date desc')->select();
 	$this->assign('newMenu',$newMenu);
-	$caseMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=2')->order('ord asc,date desc')->select();
+	$caseMenu   = M('inftype')->field('Id,topic')->where('enabled=1 and sty=2')->order('ord asc,date desc')->select();
 	$this->assign('caseMenu',$caseMenu);
-	$honorMenu    = M('inftype')->field('Id,topic')->where('enabled=1 and sty=3')->order('ord asc,date desc')->select();
+	$honorMenu  = M('inftype')->field('Id,topic')->where('enabled=1 and sty=3')->order('ord asc,date desc')->select();
 	$this->assign('honorMenu',$honorMenu);
+	$proMenu  = M('inftype')->field('Id,topic,pic')->where('enabled=1 and sty=4')->order('ord asc,date desc')->select();
+	$this->assign('proMenu',$proMenu);
   }
   
   protected function insidepic($ctag=0) {

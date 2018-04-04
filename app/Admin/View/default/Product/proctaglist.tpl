@@ -18,7 +18,11 @@
   <tr class="maintr">
     <td align="center" valign="middle" height="37">{:ckbox($obj['Id'],$i-1)}</td>
     <td align="left" valign="middle">{$dshow['pageno']+$i}</td>
-    <td align="left" valign="middle">{:modField($obj['topic'],$obj['Id'],'topic',$dshow['table'])}</td>
+    <td align="left" valign="middle">
+    	<if condition="$obj['pic'] neq ''">
+	      <a href="javascript:void(0)"{:imgshow($obj['pic'])}>{:icon('picture')}</a>
+	    </if>
+    	{:modField($obj['topic'],$obj['Id'],'topic',$dshow['table'])}</td>
     <td align="center" valign="middle">{:modord($obj['ord'],$obj['Id'],$dshow['table'])}</td>
     <td align="center" valign="middle">{:modattr($obj['Id'],$obj['enabled'],$dshow['table'])}</td>
     <td align="center" valign="middle">{:date("Y-m-d",strtotime($obj['date']))}</td>

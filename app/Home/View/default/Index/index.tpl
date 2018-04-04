@@ -16,51 +16,17 @@
 		</div>
 		<div class="product">
 			<div class="main">
-				<div class="productList"><a href="">
+				<volist name="proMenu" id="proMenuobj">
+				<div class="productList"><a href="{:U('product/index','type='.$proMenuobj['Id'].'&sty=4')}">
 					<dl>
-						<dt><img src="__img__/pro1.png"/></dt>
-						<dd>污水处理</dd>
+						<dt><img src="__img__/pro{$i}.png"/></dt>
+						<dd>{$proMenuobj['topic']}</dd>
 						<div class="pro_pic">
-							<img src="__img__/pro1.jpg" />
+							<img src="__pic__/{$proMenuobj['pic']}" />
 						</div>
 					</dl>
 				</a></div>
-				<div class="productList"><a href="">
-					<dl>
-						<dt><img src="__img__/pro2.png"/></dt>
-						<dd>雨水回用</dd>
-						<div class="pro_pic">
-							<img src="__img__/pro1.jpg" />
-						</div>
-					</dl>
-				</a></div>
-				<div class="productList"><a href="">
-					<dl>
-						<dt><img src="__img__/pro3.png"/></dt>
-						<dd>一体化预制泵站</dd>
-						<div class="pro_pic">
-							<img src="__img__/pro1.jpg" />
-						</div>
-					</dl>
-				</a></div>
-				<div class="productList"><a href="">
-					<dl>
-						<dt><img src="__img__/pro4.png"/></dt>
-						<dd>变频供水设备</dd>
-						<div class="pro_pic">
-							<img src="__img__/pro1.jpg" />
-						</div>
-					</dl>
-				</a></div>
-				<div class="productList"><a href="">
-					<dl>
-						<dt><img src="__img__/pro5.png"/></dt>
-						<dd>不锈钢水箱</dd>
-						<div class="pro_pic">
-							<img src="__img__/pro1.jpg" />
-						</div>
-					</dl>
-				</a></div>
+				</volist>
 			</div>
 		</div>
 	</div>

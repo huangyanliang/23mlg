@@ -9,8 +9,8 @@
     <td height="32" align="left">{:input(array('name'=>'topic','scene'=>'topic','val'=>$data['topic'],'tips'=>'产品标题（*必填）'))}</td>
    </tr>
    <tr>
-     <td height="32" align="right" valign="middle">产品所属：</td>
-     <td height="32" align="left">{:dropdownlink($dshow['mdata'],array('ctag'),array('promtag'),2,array(gtopic('proctag',$data['ctag']),gtopic('promtag',$data['mtag'])),array($data['ctag'],$data['mtag']))}</td>
+     <td height="32" align="right" valign="middle">资料所属：</td>
+     <td height="32" align="left">{:dropdown($dshow['mdata'],$data['inftype'],$inftopic)}</td>
    </tr>
    <tr>
      <td height="32" align="right" valign="middle">上传封面图片：</td>
@@ -19,10 +19,6 @@
    <tr>
      <td height="32" align="right" valign="middle">上传图片集：</td>
      <td height="32" align="left">{:upatlas($data['atlas'])}</td>
-   </tr>
-   <tr>
-    <td width="10%" height="32" align="right" valign="middle">购买链接：</td>
-    <td height="32" align="left">{:input(array('name'=>'linkurl','scene'=>'link','val'=>$data['linkurl'],'tips'=>'该商品淘宝购买链接'))}</td>
    </tr>
    <tr>
      <td height="32" align="right" valign="middle">产品简介：</td>
