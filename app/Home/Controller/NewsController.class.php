@@ -9,7 +9,7 @@
 	 $sty       = 1;
 	 $pagesize  = 12;
 	 $mark      = 'mark';
-	 $title     = '新闻中心';
+	 $title     = '新闻资讯';
 	 if ($type)         $type = (D('Home')->cktype('inftype',$type)) ? $type : 0;
 	 if ($domain != '') $type = D('Home')->ckdomain('inftype',$domain);
 	 $kwd       = isset($_GET['key']) ? $_GET['key'] : '';
@@ -34,6 +34,26 @@
 	 $this->assign('banner',$this->insidepic(9));
 	 $this->assign('mark',$mark);
      $this->display();
+   }
+   
+   public function newShow(){
+     $id     = I('get.id',0,'intval');
+	 $tables = 'information';
+	 if (!$id) $this->error('页面不存在');
+	 $data   = M($tables)->field('inftype,topic,author,date,content,keyword,metades,sty,hit,source,intro,pic,linkurl')->where(array('enabled'=>1,'Id'=>$id))->find();
+	 if (!$data) $this->error('页面不存在');
+	 M($tables)->where(array('enabled'=>1,'Id'=>$id))->limit(1)->setInc('hit');
+	 if ($data['linkurl'] !='' ) header("Location:".$data['linkurl']);
+	 $data['date']    = date('Y-m-d',strtotime($data['date']));
+	 $data['author']  = ($data['author']=='admin') ? '' : $data['author'];
+	 $inftype     = D('Home')->gettopic('inftype',$data['inftype']);
+	 $this->assign('data',$data);
+	 $this->assign('inftype',$inftype);
+	 $this->assign('title',$data['topic']);
+	 $this->assign('metades',($data['metades']!='') ? $data['metades'] : $data['topic']);
+	 $this->assign('metakey',($data['keyword']!='') ? $data['keyword'] : $data['topic']);
+	 $this->assign('mark','news');
+	 $this->display();
    }
    
  }

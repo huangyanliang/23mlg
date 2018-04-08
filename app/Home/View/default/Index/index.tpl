@@ -55,17 +55,17 @@
 			<!--<div class="case_l"></div>-->
 			<div class="pubBox_t" style="margin-bottom: 20px;">
 				<div class="pubTitle">成功案例</div>
-				<a href=""><span>更多</span></a>
+				<a href="{:U('case/index')}"><span>更多</span></a>
 			</div>
 			<div class="swiper-container case_r">
 				<div class="swiper-wrapper">
 					<volist name="case" id="caseobj">
 					<div class="swiper-slide">
-						<a href=""><dl>
+						<a href="{:U('case/caseShow','id='.$caseobj['Id'])}"><dl>
 							<dd><img src="__pic__/{$caseobj['pic']}" title="{$caseobj['topic']}" alt="{$caseobj['topic']}" width="100%" /></dd>
 							<dt>
 								<h3 class="ell">{$caseobj['topic']}</h3>
-								<p>澳菲专注于环保设备10年致力于打造行业领导品牌！</p>
+								<p class="ell2">{$caseobj['intro']}</p>
 							</dt>
 						</dl></a>
 					</div>
@@ -115,7 +115,7 @@
 		<div class="main">
 			<div class="pubBox_t" style="margin-bottom: 20px;">
 				<div class="pubTitle">荣誉资质</div>
-				<a href=""><span>更多</span></a>
+				<a href="{:U('honor/index')}"><span>更多</span></a>
 			</div>
 			<div class="honor">
 				<div class="swiper-container honorShow">
@@ -143,14 +143,14 @@
 	<div class="main">
 		<div class="pubBox_t">
 			<div class="pubTitle">公司简介</div>
-			<a href=""><span>更多</span></a>
+			<a href="{:U('about/index')}"><span>更多</span></a>
 		</div>
 		<div class="aboutusBox">
 			<div class="aboutCon">{$about['intro']}</div>
 			<video src="__img__/myvideo.mp4" controls="controls" poster="__img__/myvideo.jpg"></video>
 			<ul>
 				<volist name="new" id="news">
-				<a href="" title="{$news['topic']}"><li><i>0{$i}</i>{$news['topic']}<span><?php echo date('Y-m-d',strtotime($news['date']));?></span></li></a>
+				<a href="{:U('news/newShow','id='.$news['Id'])}" title="{$news['topic']}"><li><i>0{$i}</i>{$news['topic']}<span><?php echo date('Y-m-d',strtotime($news['date']));?></span></li></a>
 				</volist>
 			</ul>
 		</div>	

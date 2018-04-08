@@ -28,12 +28,31 @@
 	 $this->assign('kwd',$kwd);
 	 $this->assign('pageshow',($count>$pagesize) ? $page->showpage() : '');
 	 $this->assign("newsType",$newsType);
-	 $this->assign("news",$news);
+	 $this->assign("poducts",$news);
 	 $this->assign('title',$title);
 	 $this->assign('type',$type);
 	 $this->assign('banner',$this->insidepic(9));
 	 $this->assign('mark',$mark);
      $this->display();
    }
+   
+    public function product(){
+    	$id     = I('get.id',0,'intval');
+    	$tables = 'information';
+    	if (!$id) $this->error('页面不存在');
+    	$data   = M($tables)->field('inftype,topic,author,date,content,keyword,metades,sty,hit,source,intro,pic,atlas,linkurl')->where(array('enabled'=>1,'Id'=>$id))->find();
+    	if (!$data) $this->error('页面不存在');
+    	M($tables)->where(array('enabled'=>1,'Id'=>$id))->limit(1)->setInc('hit');
+    	if ($data['linkurl'] !='' ) header("Location:".$data['linkurl']);
+    	$data['date']    = date('Y-m-d',strtotime($data['date']));
+    	$data['author']  = ($data['author']=='admin') ? '' : $data['author'];
+    	$inftype     = D('Home')->gettopic('inftype',$data['inftype']);
+    	$this->assign('data',$data);
+    	$this->assign('inftype',$inftype);
+    	$this->assign('metades',($data['metades']!='') ? $data['metades'] : $data['topic']);
+    	$this->assign('metakey',($data['keyword']!='') ? $data['keyword'] : $data['topic']);
+    	$this->assign('mark','news');
+        $this->display("productShow");
+    }
    
  }

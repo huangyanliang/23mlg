@@ -58,43 +58,43 @@
 					</ul>
 				</dl>
 			</a>
-			<a href="<?php echo U('news/index');?>">
+			<a href="<?php echo U('product/index');?>">
 				<dl>
 					<dt>产品中心</dt>
 					<dd>Product</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('case/index');?>">
 				<dl>
 					<dt>工程案例</dt>
 					<dd>ngineering</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('honor/index');?>">
 				<dl>
 					<dt>荣誉资质</dt>
 					<dd>Honorary</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('download/index');?>">
 				<dl>
 					<dt>下载专栏</dt>
 					<dd>Download</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('news/index');?>">
 				<dl>
 					<dt>新闻资讯</dt>
 					<dd>News</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('about/index','id=3');?>">
 				<dl>
 					<dt>加入我们</dt>
 					<dd>Join us</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="<?php echo U('about/index','id=2');?>">
 				<dl>
 					<dt>联系方式</dt>
 					<dd>Contact</dd>
@@ -156,16 +156,16 @@
 			<!--<div class="case_l"></div>-->
 			<div class="pubBox_t" style="margin-bottom: 20px;">
 				<div class="pubTitle">成功案例</div>
-				<a href=""><span>更多</span></a>
+				<a href="<?php echo U('case/index');?>"><span>更多</span></a>
 			</div>
 			<div class="swiper-container case_r">
 				<div class="swiper-wrapper">
 					<?php if(is_array($case)): $i = 0; $__LIST__ = $case;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$caseobj): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
-						<a href=""><dl>
+						<a href="<?php echo U('case/caseShow','id='.$caseobj['Id']);?>"><dl>
 							<dd><img src="/23mlg/uploads/images//<?php echo ($caseobj['pic']); ?>" title="<?php echo ($caseobj['topic']); ?>" alt="<?php echo ($caseobj['topic']); ?>" width="100%" /></dd>
 							<dt>
 								<h3 class="ell"><?php echo ($caseobj['topic']); ?></h3>
-								<p>澳菲专注于环保设备10年致力于打造行业领导品牌！</p>
+								<p class="ell2"><?php echo ($caseobj['intro']); ?></p>
 							</dt>
 						</dl></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -214,7 +214,7 @@
 		<div class="main">
 			<div class="pubBox_t" style="margin-bottom: 20px;">
 				<div class="pubTitle">荣誉资质</div>
-				<a href=""><span>更多</span></a>
+				<a href="<?php echo U('honor/index');?>"><span>更多</span></a>
 			</div>
 			<div class="honor">
 				<div class="swiper-container honorShow">
@@ -240,13 +240,13 @@
 	<div class="main">
 		<div class="pubBox_t">
 			<div class="pubTitle">公司简介</div>
-			<a href=""><span>更多</span></a>
+			<a href="<?php echo U('about/index');?>"><span>更多</span></a>
 		</div>
 		<div class="aboutusBox">
 			<div class="aboutCon"><?php echo ($about['intro']); ?></div>
 			<video src="/23mlg/public/Home/images/myvideo.mp4" controls="controls" poster="/23mlg/public/Home/images/myvideo.jpg"></video>
 			<ul>
-				<?php if(is_array($new)): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><a href="" title="<?php echo ($news['topic']); ?>"><li><i>0<?php echo ($i); ?></i><?php echo ($news['topic']); ?><span><?php echo date('Y-m-d',strtotime($news['date']));?></span></li></a><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($new)): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><a href="<?php echo U('news/newShow','id='.$news['Id']);?>" title="<?php echo ($news['topic']); ?>"><li><i>0<?php echo ($i); ?></i><?php echo ($news['topic']); ?><span><?php echo date('Y-m-d',strtotime($news['date']));?></span></li></a><?php endforeach; endif; else: echo "" ;endif; ?>
 			</ul>
 		</div>	
 	</div>
@@ -264,31 +264,27 @@
 					<div class="footer_li"></div>
 					<dl>
 						<dt>走进澳菲</dt>
-						<?php if(is_array($aboutMenu)): $i = 0; $__LIST__ = $aboutMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aboutMenus): $mod = ($i % 2 );++$i;?><a href=""><dd><?php echo ($aboutMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($aboutMenu)): $i = 0; $__LIST__ = $aboutMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aboutMenus): $mod = ($i % 2 );++$i;?><a href="<?php echo U('about/index','id='.$aboutMenus['Id']);?>"><dd><?php echo ($aboutMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>产品中心</dt>
-						<dd><a href="">一体化预制泵站</a></dd>
-						<dd><a href="">污水处理设备</a></dd>
-						<dd><a href="">雨水收集系统</a></dd>
-						<dd><a href="">预制泵站</a></dd>
-						<dd><a href="">二次供水设备</a></dd>
+						<?php if(is_array($proMenu)): $i = 0; $__LIST__ = $proMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$proMenuobj): $mod = ($i % 2 );++$i;?><dd><a href="<?php echo U('product/index','type='.$proMenuobj['Id'].'&sty=4');?>"><?php echo ($proMenuobj['topic']); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>工程案例</dt>
-						<?php if(is_array($caseMenu)): $i = 0; $__LIST__ = $caseMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$caseMenus): $mod = ($i % 2 );++$i;?><a href=""><dd><?php echo ($caseMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($caseMenu)): $i = 0; $__LIST__ = $caseMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$caseMenus): $mod = ($i % 2 );++$i;?><a href="<?php echo U('case/index','type='.$caseMenus['Id']);?>"><dd><?php echo ($caseMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>新闻资讯</dt>
-						<?php if(is_array($newMenu)): $i = 0; $__LIST__ = $newMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$newMenus): $mod = ($i % 2 );++$i;?><a href=""><dd><?php echo ($newMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($newMenu)): $i = 0; $__LIST__ = $newMenu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$newMenus): $mod = ($i % 2 );++$i;?><a href="<?php echo U('news/index','type='.$newMenus['Id']);?>"><dd><?php echo ($newMenus['topic']); ?></dd></a><?php endforeach; endif; else: echo "" ;endif; ?>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
-						<dt><a href="">加入我们</a></dt>
-						<dd><a href="">招贤纳士</a></dd>
+						<dt>加入我们</dt>
+						<dd><a href="<?php echo U('about/index','id=3');?>">招贤纳士</a></dd>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>

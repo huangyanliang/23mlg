@@ -15,7 +15,7 @@
 	$this->assign('new',$new);
 	$honor   = M('information')->field('Id,topic,pic')->where('enabled=1 and sty=3')->order('ord asc,date desc')->select();
 	$this->assign('honor',$honor);
-	$case    = M('information')->field('Id,topic,pic')->where('enabled=1 and sty=2')->order('ord asc,date desc')->select();
+	$case    = M('information')->field('Id,topic,pic,intro')->where('enabled=1 and sty=2')->order('ord asc,date desc')->select();
 	$this->assign('case',$case);
 	$this->assign('mark','index');
     $this->display();

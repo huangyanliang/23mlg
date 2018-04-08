@@ -296,10 +296,10 @@ class Upload {
         }
 
         /* 检查文件后缀 */
-        if (!$this->checkExt($file['ext'])) {
-            $this->error = '上传文件后缀不允许';
-            return false;
-        }
+//      if (!$this->checkExt($file['ext'])) {
+//          $this->error = '上传文件后缀不允许';
+//          return false;
+//      }
 
         /* 通过检测 */
         return true;

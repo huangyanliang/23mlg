@@ -10,36 +10,34 @@
 					<dl>
 						<dt>走进澳菲</dt>
 						<volist name="aboutMenu" id="aboutMenus">
-						<a href=""><dd>{$aboutMenus['topic']}</dd></a>
+						<a href="{:U('about/index','id='.$aboutMenus['Id'])}"><dd>{$aboutMenus['topic']}</dd></a>
 						</volist>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>产品中心</dt>
-						<dd><a href="">一体化预制泵站</a></dd>
-						<dd><a href="">污水处理设备</a></dd>
-						<dd><a href="">雨水收集系统</a></dd>
-						<dd><a href="">预制泵站</a></dd>
-						<dd><a href="">二次供水设备</a></dd>
+						<volist name="proMenu" id="proMenuobj">
+							<dd><a href="{:U('product/index','type='.$proMenuobj['Id'].'&sty=4')}">{$proMenuobj['topic']}</a></dd>
+						</volist>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>工程案例</dt>
 						<volist name="caseMenu" id="caseMenus">
-						<a href=""><dd>{$caseMenus['topic']}</dd></a>
+						<a href="{:U('case/index','type='.$caseMenus['Id'])}"><dd>{$caseMenus['topic']}</dd></a>
 						</volist>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
 						<dt>新闻资讯</dt>
 						<volist name="newMenu" id="newMenus">
-						<a href=""><dd>{$newMenus['topic']}</dd></a>
+						<a href="{:U('news/index','type='.$newMenus['Id'])}"><dd>{$newMenus['topic']}</dd></a>
 						</volist>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>
-						<dt><a href="">加入我们</a></dt>
-						<dd><a href="">招贤纳士</a></dd>
+						<dt>加入我们</dt>
+						<dd><a href="{:U('about/index','id=3')}">招贤纳士</a></dd>
 					</dl>
 					<div class="footer_li"></div>
 					<dl>

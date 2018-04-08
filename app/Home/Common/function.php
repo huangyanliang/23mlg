@@ -30,3 +30,20 @@
 	  return $path.$pic;
 	}
  }
+  //多图上传
+ function proImgShow($file='',$piclimit=4){
+		$fileArr = unserialize($file);
+	    $myatlas = '';
+		if(count($fileArr)>0){
+		 foreach($fileArr as $key =>$fval){
+		   $isfile  = (file_exists(C("UPLOAD_PATH").'images/'.$fval)) ? 1 : 0;
+		   $showpic = ($isfile) ? __ROOT__.'/'.C("UPLOAD_PATH").'images/'.$fval  : __ROOT__.'/public/'.MODULE_NAME.'/images/404.jpg';
+		   $myatlas .= '<li><img class="cloudzoom-gallery" src="'.$showpic.'" data-cloudzoom="useZoom:\'.cloudzoom\',image:\''.$showpic.'\',zoomImage:\''.$showpic.'\'" /></li>';
+		   if($key==0){
+		   	$fistImg='<img id="img" class="cloudzoom" src="'.$showpic.'" data-cloudzoom="zoomSizeMode:\'image\',zoomImage: \''.$showpic.'\',autoInside: 30" />';
+		   }
+		 }
+		}
+		$limit = $piclimit - intval(count($fileArr));
+	    return '<div class="jqueryzoom">'.$fistImg.'</div><ul>'.$myatlas.'</ul>';
+ }

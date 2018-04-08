@@ -34,6 +34,8 @@
 	$this->assign('honorMenu',$honorMenu);
 	$proMenu  = M('inftype')->field('Id,topic,pic')->where('enabled=1 and sty=4')->order('ord asc,date desc')->select();
 	$this->assign('proMenu',$proMenu);
+	$downloadMenu  = M('inftype')->field('Id,topic,pic')->where('enabled=1 and sty=5')->order('ord asc,date desc')->select();
+	$this->assign('downloadMenu',$downloadMenu);
   }
   
   protected function insidepic($ctag=0) {

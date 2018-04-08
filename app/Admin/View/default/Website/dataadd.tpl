@@ -31,6 +31,10 @@
      <td height="32" align="right" valign="middle">上传图片：</td>
      <td height="32" align="left">{:uppic(array('tips'=>'资料配图，前台若不显示可忽略此项！'))}</td>
    </tr>
+   <tr class="hide">
+     <td height="32" align="right" valign="middle">上传文件：</td>
+     <td height="32" align="left">{:upfile()}</td>
+   </tr>
    <tr>
      <td height="32" align="right" valign="middle">资料内容：</td>
      <td height="32" align="left">{:input(array('name'=>'content','type'=>'editor'))}</td>

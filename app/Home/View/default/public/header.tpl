@@ -39,37 +39,37 @@
 					<dd>Product</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('case/index')}">
 				<dl>
 					<dt>工程案例</dt>
 					<dd>ngineering</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('honor/index')}">
 				<dl>
 					<dt>荣誉资质</dt>
 					<dd>Honorary</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('download/index')}">
 				<dl>
 					<dt>下载专栏</dt>
 					<dd>Download</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('news/index')}">
 				<dl>
 					<dt>新闻资讯</dt>
 					<dd>News</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('about/index','id=3')}">
 				<dl>
 					<dt>加入我们</dt>
 					<dd>Join us</dd>
 				</dl>
 			</a>
-			<a href="">
+			<a href="{:U('about/index','id=2')}">
 				<dl>
 					<dt>联系方式</dt>
 					<dd>Contact</dd>
